@@ -22,16 +22,7 @@ public class Set {
     }
 
     public int calculateHomeWin() {
-//   // if (homeWins > awayWins) {
-//     //       homePlayer1.incSetWons();
-//       // } else {
-//            awayPlayer1.incSetWons();
-//        }
-//
-//        // Increases the number of games played for each player.
-//        homePlayer1.incSetPlayed();
-//        awayPlayer1.incSetPlayed();
-//    
+
   return 0;
     }
 }

@@ -18,8 +18,7 @@ public class Game {
         hpoint = 0;
         apoint = 0;
         HomeWinCount = 0;
-        AwayWinCount = 0;
-    }
+       }
 
 
     public void enterGameScore(int hpoint, int apoint) {
@@ -32,11 +31,9 @@ public class Game {
            this.HomeWinCount++;
            return true;
       }
-      else{
-          this.AwayWinCount++;
+      else
           return false;
-      }
-    }
+     }
 
     @Override
     public String toString() {

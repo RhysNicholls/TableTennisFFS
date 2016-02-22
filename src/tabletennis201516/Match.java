@@ -56,7 +56,7 @@ public class Match {
     }
 
     public void calculateScores() {
-
+        
     }
 
     public void Match(String hteam, String ateam) {
@@ -65,6 +65,7 @@ public class Match {
 
 
     public boolean isHomeWin() {
+   
         return true;
     }
 }

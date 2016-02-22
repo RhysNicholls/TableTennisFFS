@@ -23,13 +23,7 @@ public class TableTennisGUI extends javax.swing.JFrame {
         a  = Integer.parseInt(parts[0]);
         b  = Integer.parseInt(parts[1]);
     }
-public enum Field{h1a1Field1, h1a1Field2, h1a1Field3,
-                           h1a2Field1, h1a2Field2, h1a2Field3,
-                           h2a1Field1, h2a1Field2, h2a1Field3,
-                           h2a2Field1, h2a2Field2, h2a2Field3
-        };
-    int HomeWinCount;
-    int AwayWinCount; 
+
     int a = 0;
     int b = 0;    
      String[] hteamlist = new String[20];
@@ -763,19 +757,14 @@ public enum Field{h1a1Field1, h1a1Field2, h1a1Field3,
     }//GEN-LAST:event_viewResultButtonActionPerformed
 
     private void calculateAndSubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calculateAndSubmitButtonActionPerformed
-        int HomeWinCount=0;
-        int AwayWinCount=0;
-        
-        
-              
+
+
         
         String input = h1a1Field1.getText();
         getPoints(input);     
         Game h1a1f1 = new Game();
         h1a1f1.enterGameScore(a,b);
-         h1a1f1.isHomeWin();
-        HomeWinCount= HomeWinCount + h1a1f1.HomeWinCount;
-        AwayWinCount= AwayWinCount + h1a1f1.AwayWinCount;
+        h1a1f1.isHomeWin();
         //System.out.println(h1a1f1);
         
         input = h1a1Field2.getText();
@@ -783,17 +772,13 @@ public enum Field{h1a1Field1, h1a1Field2, h1a1Field3,
         Game h1a1f2 = new Game();
         h1a1f2.enterGameScore(a,b);
         h1a1f2.isHomeWin();
-        HomeWinCount= HomeWinCount + h1a1f2.HomeWinCount;
-        AwayWinCount= AwayWinCount + h1a1f2.AwayWinCount;
-                //System.out.println(h1a1f2);
+       //System.out.println(h1a1f2);
         
         input = h1a1Field3.getText();
         getPoints(input);     
         Game h1a1f3 = new Game();
         h1a1f3.enterGameScore(a,b);
         h1a1f3.isHomeWin();
-        HomeWinCount= HomeWinCount + h1a1f3.HomeWinCount;
-        AwayWinCount= AwayWinCount + h1a1f3.AwayWinCount;
         //System.out.println(h1a1f3);
         
         
@@ -802,8 +787,7 @@ public enum Field{h1a1Field1, h1a1Field2, h1a1Field3,
         Game h1a2f1 = new Game();
         h1a2f1.enterGameScore(a,b);
          h1a2f1.isHomeWin();
-        HomeWinCount= HomeWinCount + h1a2f1.HomeWinCount;
-        AwayWinCount= AwayWinCount + h1a2f1.AwayWinCount;
+       
         //System.out.println(h1a1f1);
         
         input = h1a2Field2.getText();
@@ -811,8 +795,7 @@ public enum Field{h1a1Field1, h1a1Field2, h1a1Field3,
         Game h1a2f2 = new Game();
         h1a2f2.enterGameScore(a,b);
         h1a2f2.isHomeWin();
-        HomeWinCount= HomeWinCount + h1a2f2.HomeWinCount;
-        AwayWinCount= AwayWinCount + h1a2f2.AwayWinCount;
+      
                 //System.out.println(h1a1f2);
         
         input = h1a2Field3.getText();
@@ -820,16 +803,14 @@ public enum Field{h1a1Field1, h1a1Field2, h1a1Field3,
         Game h1a2f3 = new Game();
         h1a2f3.enterGameScore(a,b);
         h1a2f3.isHomeWin();
-        HomeWinCount= HomeWinCount + h1a2f3.HomeWinCount;
-        AwayWinCount= AwayWinCount + h1a2f3.AwayWinCount;
+        
         //System.out.println(h1a1f3)
         input = h2a1Field1.getText();
         getPoints(input);     
         Game h2a1f1 = new Game();
         h2a1f1.enterGameScore(a,b);
          h2a1f1.isHomeWin();
-        HomeWinCount= HomeWinCount + h2a1f1.HomeWinCount;
-        AwayWinCount= AwayWinCount + h2a1f1.AwayWinCount;
+       
         //System.out.println(h1a1f1);
         
         input = h2a1Field2.getText();
@@ -837,8 +818,7 @@ public enum Field{h1a1Field1, h1a1Field2, h1a1Field3,
         Game h2a1f2 = new Game();
         h2a1f2.enterGameScore(a,b);
         h2a1f2.isHomeWin();
-        HomeWinCount= HomeWinCount + h2a1f2.HomeWinCount;
-        AwayWinCount= AwayWinCount + h2a1f2.AwayWinCount;
+        
                 //System.out.println(h1a1f2);
         
         input = h2a1Field3.getText();
@@ -846,8 +826,7 @@ public enum Field{h1a1Field1, h1a1Field2, h1a1Field3,
         Game h2a1f3 = new Game();
         h2a1f3.enterGameScore(a,b);
         h2a1f3.isHomeWin();
-        HomeWinCount= HomeWinCount + h2a1f3.HomeWinCount;
-        AwayWinCount= AwayWinCount + h2a1f3.AwayWinCount;
+       
         //System.out.println(h1a1f3);
          
         input = h2a2Field1.getText();
@@ -855,8 +834,7 @@ public enum Field{h1a1Field1, h1a1Field2, h1a1Field3,
         Game h2a2f1 = new Game();
         h2a2f1.enterGameScore(a,b);
          h2a2f1.isHomeWin();
-        HomeWinCount= HomeWinCount + h2a2f1.HomeWinCount;
-        AwayWinCount= AwayWinCount + h2a2f1.AwayWinCount;
+       
         //System.out.println(h1a1f1);
         
         input = h2a2Field2.getText();
@@ -864,8 +842,7 @@ public enum Field{h1a1Field1, h1a1Field2, h1a1Field3,
         Game h2a2f2 = new Game();
         h2a2f2.enterGameScore(a,b);
         h2a2f2.isHomeWin();
-        HomeWinCount= HomeWinCount + h2a2f2.HomeWinCount;
-        AwayWinCount= AwayWinCount + h2a2f2.AwayWinCount;
+       
                 //System.out.println(h1a1f2);
         
         input = h2a2Field3.getText();
@@ -873,8 +850,7 @@ public enum Field{h1a1Field1, h1a1Field2, h1a1Field3,
         Game h2a2f3 = new Game();
         h2a2f3.enterGameScore(a,b);
         h2a2f3.isHomeWin();
-        HomeWinCount= HomeWinCount + h2a2f3.HomeWinCount;
-        AwayWinCount= AwayWinCount + h2a2f3.AwayWinCount;
+       
         //System.out.println(h1a1f3);
         
         input = doubleField1.getText();
@@ -882,8 +858,7 @@ public enum Field{h1a1Field1, h1a1Field2, h1a1Field3,
         Game d1 = new Game();
         d1.enterGameScore(a,b);
         d1.isHomeWin();
-  HomeWinCount= HomeWinCount + d1.HomeWinCount;
-        AwayWinCount= AwayWinCount + d1.AwayWinCount;
+
         //System.out.println(d1);
         
         input = doubleField2.getText();
@@ -891,22 +866,19 @@ public enum Field{h1a1Field1, h1a1Field2, h1a1Field3,
         Game d2 = new Game();
         d2.enterGameScore(a,b);
         d2.isHomeWin();
-        HomeWinCount= HomeWinCount + d2.HomeWinCount;
-        AwayWinCount= AwayWinCount + d2.AwayWinCount;// System.out.println(d2);
+       // System.out.println(d2);
         
         input = doubleField3.getText();
         getPoints(input);     
         Game d3 = new Game();
         d3.enterGameScore(a,b);
         d3.isHomeWin();
-         HomeWinCount= HomeWinCount + d3.HomeWinCount;
-        AwayWinCount= AwayWinCount + d3.AwayWinCount;
         //System.out.println(d3);
         
-        String SHomeWinCount = Integer.toString(HomeWinCount);
-        String SAwayWinCount = Integer.toString(AwayWinCount);
-        String teamTotalsValue = SHomeWinCount + ":" + SAwayWinCount;
-        teamTotalsField.setText(teamTotalsValue);
+//        String SHomeWinCount = Integer.toString(HomeWinCount);
+//        String SAwayWinCount = Integer.toString(AwayWinCount);
+//        String teamTotalsValue = SHomeWinCount + ":" + SAwayWinCount;
+//        teamTotalsField.setText(teamTotalsValue);
 
         
         
