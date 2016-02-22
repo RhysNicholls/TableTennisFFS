@@ -12,10 +12,13 @@ package tabletennis201516;
 public class Game {
 
     private int hpoint, apoint;
+    public int HomeWinCount, AwayWinCount;
 
     public Game() {
         hpoint = 0;
         apoint = 0;
+        HomeWinCount = 0;
+        AwayWinCount = 0;
     }
 
 
@@ -25,7 +28,14 @@ public class Game {
     }
 
     public boolean isHomeWin() {
-        return hpoint > apoint;
+      if  (hpoint > apoint){
+           this.HomeWinCount++;
+           return true;
+      }
+      else{
+          this.AwayWinCount++;
+          return false;
+      }
     }
 
     @Override
