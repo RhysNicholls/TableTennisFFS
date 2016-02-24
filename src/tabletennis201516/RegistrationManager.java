@@ -18,7 +18,7 @@ public class RegistrationManager {
     ArrayList<Player> players = new ArrayList<>();
     ArrayList<Team> teams = new ArrayList<>();
 
-    public void addTeam(Team t) {
+    public void createAndAddTeam(Team t) {
         teams.add(t);
     }
 

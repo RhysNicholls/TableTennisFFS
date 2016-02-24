@@ -44,13 +44,15 @@ public class Team {
         return tname;
     }
       
+      public ArrayList<Player> getPlayers() {
+        return players;
+    }
+      
      @Override
     public String toString() {
         return "Team{" + "name=" + tname;
     }
     
-    public ArrayList<Player> getPlayers() {
-        return players;
-    }
+   
 }
 
