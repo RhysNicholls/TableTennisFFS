@@ -50,7 +50,7 @@ public class Team {
       
      @Override
     public String toString() {
-        return "Team{" + "name=" + tname;
+        return  tname;
     }
     
    
