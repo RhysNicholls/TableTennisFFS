@@ -7,6 +7,7 @@ package tabletennis201516;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Scanner;
 import javax.swing.*;
@@ -701,8 +702,18 @@ public class TableTennisGUI extends javax.swing.JFrame {
 
     private void regPlayerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regPlayerButtonActionPerformed
 
-        String pname = regPlayerField.getText();
-        String tname = (String) regTeamsCombo.getSelectedItem();
+        String npm = regPlayerField.getText();
+        String npt = regTeamsCombo.getSelectedItem().toString();
+        
+        if (!npm.isEmpty() && !npt.isEmpty()) {
+                rm.regPlayerToTeam(new Player(npm), new Team(npt));
+                JOptionPane.showMessageDialog(null, "Player added succesfully");
+            } else {
+                JOptionPane.
+                        showMessageDialog(null, "Player registration failed.",
+                                "Error",
+                                JOptionPane.ERROR_MESSAGE);
+            }
 
         // write your own code to complete the action
 
@@ -719,17 +730,20 @@ public class TableTennisGUI extends javax.swing.JFrame {
 
     private void homeTeamComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeTeamComboBoxActionPerformed
         
-        homeTeam = (String) homeTeamComboBox.getSelectedItem();
-        // TODO add your handling code here:
+        String homeTeam = homeTeamComboBox.getSelectedItem().toString();
+        homeTeamTemp = homeTeam;
+        //String[] homeTeamPlayers = Arrays.copyOf(, objectArray.length, String[].class);
+
+
     }//GEN-LAST:event_homeTeamComboBoxActionPerformed
 
     private void awayTeamComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_awayTeamComboBoxActionPerformed
         
-        awayTeam = (String) awayTeamComboBox.getSelectedItem();
-        if (awayTeam.equals(homeTeam)) {
-        JOptionPane.showMessageDialog (null, "This team is already selected", "as the Home Team", JOptionPane.INFORMATION_MESSAGE);
+        String awayTeam = awayTeamComboBox.getSelectedItem().toString();
+        if (awayTeam.equals(homeTeamTemp)) {
+     JOptionPane.showMessageDialog (null, "This team is already selected", "as the Home Team", JOptionPane.INFORMATION_MESSAGE);
                 
-        }    // TODO add your handling code here:
+       }    // TODO add your handling code here:
     }//GEN-LAST:event_awayTeamComboBoxActionPerformed
 
     private void h1a1Field1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_h1a1Field1ActionPerformed
@@ -945,8 +959,7 @@ public class TableTennisGUI extends javax.swing.JFrame {
          if (!tname.isEmpty()) {
                 rm.createAndAddTeam(new Team(tname));
                 JOptionPane.showMessageDialog(null, "Team added");
-                System.out.print (tname);
-                System.out.println(rm.getAllTeams());
+               
 
          }
          Team[] teamArray =  rm.getAllTeams().toArray(new Team[rm.getAllTeams().size()]);
@@ -1131,13 +1144,15 @@ public class TableTennisGUI extends javax.swing.JFrame {
     ReportGenerator report;
 
     //variables for temporary usages
-    private String homeTeam;
-    private String awayTeam;
+    //private String homeTeam;
+    //private String awayTeam;
     private String hplayer1;
     private String hplayer2;
     private String aplayer1;
     private String aplayer2;
+    private String homeTeamTemp;
     RegistrationManager rm = new RegistrationManager();
+   ArrayList<Player> player = rm.getAllPlayers();
 
     //"testscores.txt" contans some game points. This save the tester to enter the points manually.
     public Scanner sc = new Scanner(TableTennisGUI.class.getResourceAsStream("/testscores.txt"));

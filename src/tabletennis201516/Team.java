@@ -12,15 +12,15 @@ import java.util.ArrayList;
  * @author jin
  */
 public class Team {
-    private String tname;
+    private String name;
     private ArrayList<Player> players = new ArrayList<>();
     
-   public Team(String tname) {
-        this.tname = tname;
-   }
+     public Team(String name) {
+        this.name = name;
    
-   public void addMember(Player player) {
-        players.add(player);
+    }
+   public void addMember(Player p) {
+        players.add(p);
    }
    
    public boolean isPlayerValid(String playerName) {
@@ -41,7 +41,7 @@ public class Team {
     }
       
       public String getName() {
-        return tname;
+        return name;
     }
       
       public ArrayList<Player> getPlayers() {
@@ -50,7 +50,7 @@ public class Team {
       
      @Override
     public String toString() {
-        return  tname;
+        return  name;
     }
     
    
