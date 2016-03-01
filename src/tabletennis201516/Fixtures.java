@@ -23,7 +23,7 @@ public class Fixtures {
     
     
 public void GetAMatch(String Hteam, String Ateam){
-    
+    Match CurrentMatch = new Match(Hteam,Ateam);
 }
    
 }
