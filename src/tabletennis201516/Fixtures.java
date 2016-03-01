@@ -19,9 +19,11 @@ public class Fixtures {
     
     public void generateFixtures (/* reg RegistarionManager*/) {
         
-        
-        
     }
     
+    
+public void GetAMatch(String Hteam, String Ateam){
+    
+}
    
 }
