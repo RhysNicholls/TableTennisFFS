@@ -15,7 +15,23 @@ public class Match {
     private boolean played;
     private int hTeamWin, aTeamWin;
 
-    public String gethTeam() {
+   public Match(String hteam, String ateam) {
+     int HomeWinCount = 0;
+     int AwayWinCount = 0; 
+        
+      
+
+    }
+   
+   public void GetSet(){
+       Set h1 = new Set();
+       Set a1 = new Set();
+       Set h2 = new Set();
+       Set a2 = new Set();
+       Set h3 = new Set();
+       Set a3 = new Set();
+   }
+   public String gethTeam() {
         return hTeam;
     }
 
@@ -47,134 +63,19 @@ public class Match {
         this.aTeamWin = aTeamWin;
     }
 
-    public Match(String hteam, String ateam) {
-     int HomeWinCount = 0;
-     int AwayWinCount = 0; 
-        
-        String input = .h1a1Field1.getText();
+  
+
+    public boolean isPlayed() {
+        return true;
+    }
+
+    public void calculateScores() {
+        String input =.h1a1Field1.getText();
         getPoints(input);     
         Game h1a1f1 = new Game();
         h1a1f1.enterGameScore(a,b);
          if (h1a1f1.isHomeWin())
             HomeWinCount++;
-         else
-            AwayWinCount++;
-        //System.out.println(h1a1f1);
-        
-        input = h1a1Field2.getText();
-        getPoints(input);     
-        Game h1a1f2 = new Game();
-        h1a1f2.enterGameScore(a,b);
-        if (h1a1f2.isHomeWin())
-            HomeWinCount++;
-         else
-            AwayWinCount++;
-        //System.out.println(h1a1f2);
-        
-        input = h1a1Field3.getText();
-        getPoints(input);     
-        Game h1a1f3 = new Game();
-        h1a1f3.enterGameScore(a,b);
-        if (h1a1f3.isHomeWin())
-            HomeWinCount++;
-         else
-            AwayWinCount++;
-        //System.out.println(h1a1f3);
-        
-        
-
-        input = h1a2Field1.getText();
-        getPoints(input);     
-        Game h1a2f1 = new Game();
-        h1a2f1.enterGameScore(a,b);
-        if (h1a2f1.isHomeWin())
-            HomeWinCount++;
-         else
-            AwayWinCount++;
-        //System.out.println(h1a2f1);
-        
-        input = h1a2Field2.getText();
-        getPoints(input);     
-        Game h1a2f2 = new Game();
-        h1a2f2.enterGameScore(a,b);
-        if (h1a2f2.isHomeWin())
-            HomeWinCount++;
-         else
-            AwayWinCount++;
-        //System.out.println(h1a2f2);
-        
-        input = h1a2Field3.getText();
-        getPoints(input);     
-        Game h1a2f3 = new Game();
-        h1a2f3.enterGameScore(a,b);
-        if (h1a2f3.isHomeWin())
-            HomeWinCount++;
-         else
-            AwayWinCount++;
-        //System.out.println(h1a2f3);
-        
-        
-        
-        input = h2a1Field1.getText();
-        getPoints(input);     
-        Game h2a1f1 = new Game();
-        h2a1f1.enterGameScore(a,b);
-        if (h2a1f1.isHomeWin())
-            HomeWinCount++;
-         else
-            AwayWinCount++;
-        //System.out.println(h2a1f1);
-        
-        input = h2a1Field2.getText();
-        getPoints(input);     
-        Game h2a1f2 = new Game();
-        h2a1f2.enterGameScore(a,b);
-        if (h2a1f2.isHomeWin())
-            HomeWinCount++;
-         else
-            AwayWinCount++;
-        //System.out.println(h2a1f2);
-        
-        input = h2a1Field3.getText();
-        getPoints(input);     
-        Game h2a1f3 = new Game();
-        h2a1f3.enterGameScore(a,b);
-        if (h2a1f3.isHomeWin())
-            HomeWinCount++;
-         else
-            AwayWinCount++;
-        //System.out.println(h2a1f3);
-        
-        
-        input = h2a2Field1.getText();
-        getPoints(input);     
-        Game h2a2f1 = new Game();
-        h2a2f1.enterGameScore(a,b);
-        if (h2a2f1.isHomeWin())
-            HomeWinCount++;
-         else
-            AwayWinCount++;
-        //System.out.println(h2a2f1);
-        
-        input = h2a2Field2.getText();
-        getPoints(input);     
-        Game h2a2f2 = new Game();
-        h2a2f2.enterGameScore(a,b);
-        if (h2a2f2.isHomeWin())
-            HomeWinCount++;
-         else
-            AwayWinCount++;
-        //System.out.println(h2a2f2);
-        
-        input = h2a2Field3.getText();
-        getPoints(input);     
-        Game h2a2f3 = new Game();
-        h2a2f3.enterGameScore(a,b);
-        if (h2a2f3.isHomeWin())
-            HomeWinCount++;
-         else
-            AwayWinCount++;
-       // System.out.println(h2a2f3);
         
         input = doubleField1.getText();
         getPoints(input);     
@@ -186,44 +87,15 @@ public class Match {
             AwayWinCount++;
         //System.out.println(d1);
         
-        input = doubleField2.getText();
-        getPoints(input);     
-        Game d2 = new Game();
-        d2.enterGameScore(a,b);
-        if (d2.isHomeWin())
-            HomeWinCount++;
-         else
-            AwayWinCount++;
-       // System.out.println(d2);
-        
-        input = doubleField3.getText();
-        getPoints(input);     
-        Game d3 = new Game();
-        d3.enterGameScore(a,b);
-        if (d3.isHomeWin())
-            HomeWinCount++;
-         else
-            AwayWinCount++;
+   
         //System.out.println(d3);
         
         String SHomeWinCount = Integer.toString(HomeWinCount);
         String SAwayWinCount = Integer.toString(AwayWinCount);
         String teamTotalsValue = SHomeWinCount + ":" + SAwayWinCount;
         teamTotalsField.setText(teamTotalsValue);
-
     }
 
-    public boolean isPlayed() {
-        return true;
-    }
-
-    public void calculateScores() {
-
-    }
-
-    public void Match(String hteam, String ateam) {
-
-    }
 
 
     public boolean isHomeWin() {
