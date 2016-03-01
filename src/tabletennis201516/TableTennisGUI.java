@@ -758,7 +758,15 @@ public class TableTennisGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_viewResultButtonActionPerformed
 
     private void calculateAndSubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calculateAndSubmitButtonActionPerformed
-      
+       // assign input variables to values
+         String input =h1a1Field1.getText();
+         
+         GetAMatch(homeTeam,awayTeam);
+         GetSet();
+         
+       
+        
+        
     
         
         
